@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu cartão de visitas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <button id="toggle-dark">🌙 Alternar Tema</button>
+    <div class="cartao">
+        <h1>Meu Cartão de Visita</h1>
+        
+        <img src="logo.jpg" alt="Minha foto de perfil Profissional!">
+        
+        <h3>Marcos Vinicius</h3>
+        <ul>
+            <li>Em transição de carreira</li>
+            <li>Focado em DESENVOLVIMENTO WEB no DeClub👨‍🎓🖥️</li>
+            <li>Cosntruindo um futuro com uma paixão por código</li>
+        </ul>
+        <p>Clique abaixo para me conhecer melhor:</p>
+
+        <div class="links-sociais">
+            <a href="https://www.instagram.com/marcos_vinicius243/" target="_blank" class="botao-instagram">
+                <i class="fab fa-instagram"></i> Acesse meu Instagram
+            </a>
+
+            <a href="https://wa.me/5581991236700" target="_blank" class="botao-whatsapp">
+                <i class="fab fa-whatsapp"></i> Conversar no WhatsApp
+            </a>
+        </div>
+    </div>
+</body>
+<script>
+    const btn = document.getElementById('toggle-dark');
+    const body = document.body;
+
+    btn.addEventListener('click', () => {
+        // O 'toggle' liga/desliga a classe no body
+        body.classList.toggle('dark-mode');
+        
+        // Muda o ícone do botão conforme o tema
+        if (body.classList.contains('dark-mode')) {
+            btn.textContent = "☀️ Modo Claro";
+        } else {
+            btn.textContent = "🌙 Modo Escuro";
+        }
+    });
+</script>
+</html>

@@ -1,0 +1,104 @@
+
+body{
+     background-image: url(fundo.png);
+     background-size: cover;
+    background-color: #f4f7f6; /* Um cinza bem clarinho e moderno */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+#toggle-dark {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    background: white;
+    font-weight: bold;
+    transition: 0.3s;}
+    body.dark-mode {
+    background-color: #121212; /* Fundo quase preto */
+    background-image: url(fundopagina.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body.dark-mode .cartao {
+    background-image: linear-gradient(to bottom,#000000,#591187); /* Cartão cinza escuro */
+    color: white;              /* Texto branco */
+    border: 1px solid #333;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+body.dark-mode h1, body.dark-mode h3 {
+    color: #e0e0e0;
+}
+.cartao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px; /* Aumentei o preenchimento */
+    background-color: rgba(255,255,255,0.5); /* Adicionei fundo branco */
+    background-image: linear-gradient(to bottom,#22def7,#c2e9fb);
+    border-radius: 20px;     /* Cantos arredondados */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Sombra suave */
+    border: none; /* Removi a borda cinza simples */
+    width: 350px; /* Defini uma largura fixa para não espalhar */
+    backdrop-filter: blur(30px);
+}
+img{ 
+    width: 200px; /* Ou o tamanho que você preferir */
+    height: 200px; /* Deve ser igual à largura para ser um círculo perfeito */
+    border-radius: 50%; /* Esta é a "mágica" que deixa a foto redonda */
+    object-fit: cover; /* Garante que a imagem não fique esticada */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Dá um sombreado */
+    border: 4px solid #333; /* Uma borda para destacar a foto */
+    margin-bottom: 15px;    /* Espaço entre a foto e o texto abaixo */
+
+}
+.links-sociais {
+    display: flex;       /* Ativa o modo Flexbox */
+    gap: 15px;           /* Cria um espaço de 15px entre os botões */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    margin-top: 20px;    /* Afasta os botões do texto de cima */
+}
+.botao-instagram{
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.3s;
+}   
+.botao-instagram:hover {
+    background: linear-gradient(45deg, #bc1888 0%, #cc2366 25%, #dc2743 50%, #e6683c 75%, #f09433 100%); /* Inverte as cores no hover */
+    transform: translateY(-3px); /* O botão sobe levemente */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+.botao-whatsapp {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #25D366; /* Verde oficial do WhatsApp */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.botao-whatsapp:hover {
+    background-color: #128C7E; /* Um verde mais escuro no hover */
+    transform: scale(1.05);
+}
+
+.botao-whatsapp i {
+    margin-right: 8px;
+    font-size: 1.2em;
+}
