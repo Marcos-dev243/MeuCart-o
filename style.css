@@ -11,21 +11,17 @@ body{
     margin: 0;
 }
 #toggle-dark {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    position: fixed; /* Fixa o botão na tela */
+    top: 15px;
+    right: 15px;
     padding: 10px 15px;
     cursor: pointer;
     border-radius: 30px;
     border: 1px solid #ccc;
     background: white;
     font-weight: bold;
-    transition: 0.3s;}
-    body.dark-mode {
-    background-color: #121212; /* Fundo quase preto */
-    background-image: url(fundopagina.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    transition: 0.3s;
+    z-index: 1000; /* Garante que ele fique NA FRENTE de tudo */
 }
 
 body.dark-mode .cartao {
